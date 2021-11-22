@@ -1,0 +1,43 @@
+.top{
+    
+    background-color: #F3CA20;
+    height: 600px;
+    width: 1000px;
+    margin-left: 400px;
+    
+    border: 15px black;
+    padding: 50px;
+
+
+
+}
+.result{
+    margin-top: 20px;
+    margin-left: 400px;
+    background-color: rgb(34, 17, 17);
+    color:#F3CA20;
+    width: 1000px;
+    height: 100px;
+    padding: 50px;
+}
+.top button{
+    margin-top: 20px;
+    background-color:rgb(15, 1, 1);
+    color:#F3CA20;
+    font-size: 25px;
+}
+.top input{
+    height: 40px;
+}
+h1{
+    margin-left: 600px;
+    font-size: 60px;
+}
+h2{
+    margin-left: 300px;
+    font-size: 50px;
+}
+label{
+    font-size: 40px;
+}
+

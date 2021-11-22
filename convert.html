@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Conversion Page</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='stylesheet.css'>
+
+    <!-- JQuery Library import -->
+    <script
+       src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" 
+    ></script>
+    <!-- JQuery Library import -->
+    <script>
+       $(document).ready(function(){
+        //    hide Kg to Dharni option if Dharni to Kg is clicked
+        // shows result bar with animation
+        // change the background color of main menu
+            $(".result").hide();
+           $("#btnD2K").click(function(){
+                $("#btnK2D").hide();
+                $("#lblKg").hide();
+                $("#kg").hide();
+                $(".result").show(1000);
+                $(".top").css("background-color","#949398FF")
+             });
+            //  hide Dharni to Kg option if Kg to Dharni is clicked
+            $("#btnK2D").click(function(){
+                $("#btnD2K").hide();
+                $("#lblDhar").hide();
+                $("#dharni").hide();
+                $(".result").show(1000);
+                $(".top").css("background-color","#949398FF")
+             });
+       });
+    </script>
+
+
+    <!--   Java Scripts -->
+    <script>
+        function convertToKg(){
+        var dharni;
+        var kg;
+        dharni=parseInt(document.getElementById("dharni").value);
+        kg=dharni*2.3325;
+        
+        document.getElementById("answer").innerHTML=kg+" Kg"
+        document.getElementById("kg").innerHTML.value='';
+        }
+        function convertToDhar(){
+        var dharni;
+        var kg;
+        dharni=parseInt(document.getElementById("kg").value);
+        kg=dharni/2.3325;
+        
+        document.getElementById("answer").innerHTML=kg+" Dharni"
+        document.getElementById("dharni").innerHTML=""
+
+        }
+        </script>
+</head>
+<body>
+
+<h1> Dharni to Kg Conversion</h1>
+
+<div class="top">
+
+    <label id="lblDhar">Enter in Dharni (dharni)</label></br>
+    <input type="number" id="dharni"></input></br>
+    <button id="btnD2K" onclick="convertToKg()">Convert To Kg</button></br>
+</br>
+</br>
+    <label id="lblKg">Enter in Kilograms (kg)</label></br>
+    <input type="number" id="kg"></input></br>
+
+    <button  id=btnK2D class="K2D" onclick="convertToDhar()">Convert To Dharni</button>
+</br>
+</br>
+</br>
+</br>
+<button  id ="clear" onclick="history.go(0)">Clear</button>
+
+
+</div>
+
+<div class="result">
+    <h2 id="answer"></h1>
+</div>
+
+</body>
+</html>
